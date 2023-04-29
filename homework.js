@@ -135,7 +135,7 @@ console.log(noVowels);
     Наприклад: 1000 метрів це 1 кілометр;  32 метри це 0,032 кілометра і т.д.
  */
 
-let meters = 21;
+let meters = 99;
 let kilometers = meters / 1000;
 let kilometersName = "кілометр";
 let metersName = "метр";
@@ -160,4 +160,6 @@ if (meters == 1 || meters % 10 == 1) {
   meters.toString().endsWith(4)
 ) {
   console.log(`${meters} ${metersName}а це ${kilometers} ${kilometersName}a`);
+} else {
+  console.log(`${meters} ${metersName}ів це ${kilometers} ${kilometersName}a`);
 }
