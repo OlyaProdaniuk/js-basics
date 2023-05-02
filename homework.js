@@ -8,7 +8,7 @@
 
 let hamburgers = 4;
 let fries = 3;
-if (hamburgers === 4 && fries === 4) {
+if (hamburgers >= 4 && fries >= 4) {
   console.log("Ми поїли");
 } else if (isNaN(hamburgers && fries)) {
   console.log("we need numbers");
@@ -60,15 +60,22 @@ if (seasonNumber == 1) {
     Використати вкладені оператори if
     Результат виводити в консоль.*/
 
-let integers = ["a", "b", "c"];
-let middleItem = Math.floor(integers.length / 2);
-console.log(middleItem);
-if (middleItem === 1) {
-  console.log(integers[1]);
-} else if (middleItem === 2) {
-  console.log("wrong");
+let firstNum = 10;
+let secondNum = 20;
+let thirdNum = 30;
+
+if (
+  (firstNum < secondNum && secondNum < thirdNum) ||
+  (thirdNum < secondNum && secondNum < firstNum)
+) {
+  console.log(`The answer is ${secondNum}`);
+} else if (
+  (secondNum < firstNum && firstNum < thirdNum) ||
+  (thirdNum < firstNum && firstNum < secondNum)
+) {
+  console.log(`The answer is ${firstNum}`);
 } else {
-  console.log("think again");
+  console.log(`The answer is ${thirdNum}`);
 }
 /*6.  Задано номер дня тижня.
     За заданим номером вивести назву дня тижня використовуючи switch.
@@ -105,8 +112,9 @@ switch (weekDays) {
     Результат виводити в консоль. */
 let a = 5;
 let b = 19;
+let operator = "+";
 
-switch ((a, b)) {
+switch (operator) {
   case "+":
     console.log(a + b);
     break;
@@ -135,7 +143,7 @@ console.log(noVowels);
     Наприклад: 1000 метрів це 1 кілометр;  32 метри це 0,032 кілометра і т.д.
  */
 
-let meters = 99;
+let meters = 5000;
 let kilometers = meters / 1000;
 let kilometersName = "кілометр";
 let metersName = "метр";
@@ -144,9 +152,17 @@ if (meters == 1 || meters % 10 == 1) {
   console.log(`${meters} ${metersName} це ${kilometers} ${kilometersName}a`);
 } else if (meters >= 2 && meters <= 4) {
   console.log(`${meters} ${metersName}a це ${kilometers} ${kilometersName}a`);
+} else if (
+  meters.toString().endsWith(5) ||
+  meters.toString().endsWith(6) ||
+  meters.toString().endsWith(7) ||
+  meters.toString().endsWith(8) ||
+  meters.toString().endsWith(9)
+) {
+  console.log(`${meters} ${metersName}ів це ${kilometers} ${kilometersName}а`);
+} else if (meters >= 5000 && kilometers >= 5 && kilometers <= 20) {
+  console.log(`${meters} ${metersName}ів це ${kilometers} ${kilometersName}ів`);
 } else if (meters >= 5 && meters <= 20) {
-  console.log(`${meters} ${metersName}ів це ${kilometers} ${kilometersName}a`);
-} else if (meters == Math.floor(Math.random() * 10) * 10) {
   console.log(`${meters} ${metersName}ів це ${kilometers} ${kilometersName}a`);
 } else if (meters % 10 == 0 && meters != 1000) {
   console.log(`${meters} ${metersName}ів це ${kilometers} ${kilometersName}a`);
@@ -159,7 +175,7 @@ if (meters == 1 || meters % 10 == 1) {
   meters.toString().endsWith(3) ||
   meters.toString().endsWith(4)
 ) {
-  console.log(`${meters} ${metersName}а це ${kilometers} ${kilometersName}a`);
+  console.log(`${meters} ${metersName}ів це ${kilometers} ${kilometersName}ів`);
 } else {
-  console.log(`${meters} ${metersName}ів це ${kilometers} ${kilometersName}a`);
+  console.log(`${meters} ${metersName}ів це ${kilometers} ${kilometersName}ів`);
 }
