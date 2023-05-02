@@ -80,7 +80,7 @@ if (
 /*6.  Задано номер дня тижня.
     За заданим номером вивести назву дня тижня використовуючи switch.
     Результат виводити в консоль. */
-let weekDays = prompt("Please enter number from 1 to 7");
+let weekDays = "3";
 switch (weekDays) {
   case "1":
     console.log("Monday");
