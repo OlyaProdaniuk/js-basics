@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: grey;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+#text{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+p{
+    color: black;
+}
+#pushBtn{
+    background-color: pink;
+    border: 1px green solid;
+    border-radius: 4px;
+    padding: 40px;
+}
